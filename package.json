@@ -1,0 +1,19 @@
+{
+  "name": "webguardian-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && node build.js",
+    "watch": "esbuild src/background.ts --bundle --outfile=dist/background.js --target=chrome110 --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.2.5",
+    "dotenv": "^17.4.2",
+    "esbuild": "^0.28.2"
+  }
+}
